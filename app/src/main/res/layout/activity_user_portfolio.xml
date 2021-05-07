@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.UserPortfolioActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_user_points"
+        android:name="no.ajevn.cryptotrader.ui.fragments.UserScoreFragment"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/list_item_border"
+        android:backgroundTint="@color/background_main_light"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_user_points">
+
+        <TextView
+            android:id="@+id/activity_user_portfolio_text_balance"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Your total current points are the sum of current value of all your currencies in USD"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="My Portfolio"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_user_portfolio_currencies"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.7"
+                    android:backgroundTint="@color/button_buy"
+                    android:src="@drawable/ic_dollar_symbol"
+                    android:paddingLeft="50dp"/>
+
+                <TextView
+                    android:id="@+id/activity_user_portfolio_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/button_sell"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_vertical"
+                    android:text="1000.00 USD"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tw_currency_list_main"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/fragment_user_points"
+            tools:layout_editor_absoluteY="110dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Currency"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Details"
+                android:textAlignment="center"
+                android:paddingRight="8dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Value USD"
+                android:textAlignment="center"
+                android:paddingRight="5dp"/>
+
+        </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/rw_user_portfolio"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:listitem="@layout/user_portfolio_list_item"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp"
+            >
+
+            <Button
+                android:id="@+id/activity_user_portfolio_transaction_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Transactions"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

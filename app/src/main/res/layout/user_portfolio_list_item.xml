@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_portfolio_list_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:background="@drawable/list_item_border"
+    >
+
+  <ImageView
+      android:id="@+id/user_portfolio_list_item_icon"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_gravity="center"
+      android:layout_weight="0.1"
+      android:src="@drawable/background_startup_splash" />
+
+  <LinearLayout
+      android:layout_height="wrap_content"
+      android:layout_width="0dp"
+      android:layout_gravity="center"
+      android:paddingLeft="5dp"
+      android:layout_weight="0.8"
+      android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/user_portfolio_list_item_text_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BTC" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_height="match_parent"
+      android:layout_width="0dp"
+      android:layout_weight="3"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+      <TextView
+          android:id="@+id/user_portfolio_list_item_text_currency_amount"
+          android:layout_width="wrap_content"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:fontFamily="sans-serif-medium"
+          android:maxLength="16"
+          android:text="$ 200 00000000000000"
+          android:textAlignment="viewStart"
+          android:textSize="16sp" />
+
+      <TextView
+          android:id="@+id/user_portfolio_list_item_text_currency_value"
+          android:layout_width="wrap_content"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:maxLength="16"
+          android:fontFamily="sans-serif-medium"
+          android:paddingRight="10dp"
+          android:text="5.67"
+          android:textAlignment="viewStart"
+          android:textSize="16sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/user_portfolio_list_item_text_currency_total_usd"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fontFamily="sans-serif-medium"
+        android:maxLength="8"
+        android:gravity="center"
+        android:text="$ 200 0004444"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+  </LinearLayout>
+
+</LinearLayout>

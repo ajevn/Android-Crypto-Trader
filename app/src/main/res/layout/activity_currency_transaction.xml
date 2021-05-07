@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.CurrencyTradingActivity">
+
+    <LinearLayout
+        android:id="@+id/currency_transaction_item_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/currency_transaction_item_icon"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:padding="20dp"
+            android:src="@drawable/background_startup_splash"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:layout_constraintStart_toEndOf="@+id/currency_transaction_item_icon"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/currency_transaction_item_text_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/currency_transaction_item_text_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Error Retriving Currency"
+                android:textAlignment="viewStart"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/currency_transaction_item_text_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLength="8"
+                android:text=""
+                android:textAlignment="viewStart"
+                android:textSize="30sp" />
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- User.kt Balance and buy/sell buttons -->
+    <!-- Fragments -->
+    <FrameLayout
+        android:id="@+id/transaction_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_transaction_item_linearLayout"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

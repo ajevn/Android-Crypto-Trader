@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <!-- Background Color -->
+    <item android:drawable="@color/background_main_dark" />
+    <!-- App Logo -->
+    <item
+        android:id="@+id/logo"
+        android:drawable="@drawable/ic_crypto_logo"
+        android:gravity="center"/>
+</layer-list>
