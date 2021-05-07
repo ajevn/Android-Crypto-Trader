@@ -1,6 +1,6 @@
 # CryptoTrader
 
-**Min SDK:** 24
+**Minimum SDK:** 24
 
 **AVD used during development:**
 Pixel 3 XL – API 29,
