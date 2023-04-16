@@ -7,9 +7,9 @@ Pixel 3 XL – API 29,
 Nexus S – API 24
 
 ### Summary
-A simple android application introducing people to cryptocurrency trading. Starting balance is 10.000$
-which will change according to recent currency rates, based on a user's portfolio. The application is perfect for
-people wanting to get familiar with cryptocurrency trading before using real money.
+A simple android application introducing people to a simple form of cryptocurrency trading. Starting balance is 10.000$
+which will change according to recently updated currency rates, as well as the user portfolio. The application is suitable for
+people that want to experiment with cryptocurrency trading.
 
 
 ![1](https://user-images.githubusercontent.com/56090334/119501377-1a932a00-bd69-11eb-8a24-4f7ad641f0fc.png)
